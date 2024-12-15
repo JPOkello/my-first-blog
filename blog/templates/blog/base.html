@@ -20,6 +20,13 @@ tstrap.min.css" integrity="sha384
 <body>
     <header class="page-header">
       <div class="container">
+
+        {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu">
+        {% include './icons/file-earmark-plus.svg' %}
+    </a>
+{% endif %}
+        
           <h1><a href="/">OJPulse</a></h1>
       </div>
     </header>
